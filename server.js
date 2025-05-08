@@ -73,7 +73,7 @@ if (!SERVER_SECRET) {
 }
 
 // 캐시 사용 여부 설정
-const USE_CACHE = getEnvValue('USE_CACHE');
+let USE_CACHE = getEnvValue('USE_CACHE');
 if (!USE_CACHE) {
     USE_CACHE = false;
 }
