@@ -29,10 +29,10 @@ const getCache = async (key) => {
  * 데이터를 캐시에 저장
  * @param {string} key 캐시 키
  * @param {string} value 저장할 데이터
- * @param {number} ttl 캐시 유효 시간 (초)
+ * @param {number} ttl 캐시 유효 시간 (초) (디폴트: 1주일)
  * @returns {Promise<boolean>} 저장 성공 여부
  */
-const setCache = async (key, value, ttl = 3600) => {
+const setCache = async (key, value, ttl = 604800) => {
     try {
         await client.set(key, value, {
             EX: ttl
